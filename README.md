@@ -111,7 +111,6 @@ python 2_code/run_rsa_trait_space.py            # → 3_pipeline/{us,cn}/trait_s
 
 # Perceiver-level LMMs (familiarity moderation is the analysis reported in the Results)
 python 2_code/run_lmm.py --dataset us|cn|both --model fam
-python 2_code/run_lmm_fam_interaction_maxt.py   # max-T correction for the interaction terms
 python 2_code/run_lmm_trait_space.py            # trait-space LMMs
 
 # Publication figures — everything lands in 4_output/publication/
@@ -122,12 +121,14 @@ python 2_code/plot_publication_figures.py       # figs 05-08 (RSA, variance part
 ### Supplementary analyses (`2_code/supplementary/`, run from repo root)
 
 ```bash
-python 2_code/supplementary/run_lmm_maxt.py                       # max-T for base-LMM betas
 python 2_code/supplementary/run_merged_lmm.py                     # pooled US+CN LMM (common traits)
 ```
 
 The base LMM (`python 2_code/run_lmm.py --model base`, → `dual_lmm_results.csv`)
 is likewise supplementary.
+
+LMM multiplicity is handled with Holm correction in the selected maximal-model
+results; max-T is not used for the LMM analyses.
 
 ## Outputs
 
@@ -156,9 +157,8 @@ two-column contract; `source_data/` holds the exact rows behind each panel.
 | `fig11_trait_space_lmm_moderation.png` | Trait-space LMM familiarity-moderation β |
 | `fig12_lmm_moderation_betas.png` | Per-trait LMM familiarity-moderation β |
 
-`supplementary/` holds `trait_correlation_matrix_{ds}.png`,
-`tsne_visual_occupation_{ds}.png`, `tsne_trait_space_{ds}.png` and the
-recognition-split figures `figR1`-`figR3`.
+Auxiliary figures written to `4_output/publication/supplementary/` are generated
+locally and excluded from version control.
 
 ## Folder structure
 
@@ -172,7 +172,5 @@ dual-route-traits/
 ├── 3_pipeline/{us,cn}/        intermediate CSVs (flat; shared by main + supplementary)
 │   └── lmm_familiarity_maximal/  selected/maximal random-effects LMM tables
 ├── 4_output/publication/      all manuscript figures (pdf/svg/png/tiff) + source_data/
-│   └── supplementary/         supplementary figures
-├── 4_output/comparison/       participant-level exploratory plots
 └── requirements.txt           Python dependencies
 ```

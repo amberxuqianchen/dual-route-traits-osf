@@ -79,15 +79,11 @@ def _pub_style(ax):
 def _load(ds):
     lmm = pd.read_csv(PIPELINE_DIR / ds / 'lmm_recognition_split.csv')
     rsa = pd.read_csv(PIPELINE_DIR / ds / 'rsa_recognition_trial_split.csv')
-    mp = PIPELINE_DIR / ds / 'lmm_recognition_maxt_results.csv'
-    maxt = pd.read_csv(mp) if mp.exists() else None
-    return lmm, rsa, maxt
+    return lmm, rsa
 
 
-def _marker(p_unc, p_maxt):
-    """Filled = survives max-T; ringed = uncorrected only; hollow = n.s."""
-    if p_maxt is not None and p_maxt < .05:
-        return dict(markeredgecolor='k', markeredgewidth=0.9, alpha=1.0)
+def _marker(p_unc):
+    """Ringed = uncorrected p < .05; hollow = n.s."""
     if p_unc < .05:
         return dict(markeredgecolor='0.35', markeredgewidth=0.6, alpha=1.0)
     return dict(markeredgecolor='none', markeredgewidth=0, alpha=0.45)
@@ -98,7 +94,7 @@ def _marker(p_unc, p_maxt):
 def fig_deltas():
     fig, axes = plt.subplots(1, 2, figsize=(FULL_WIDTH, 3.1))
     for ax, ds in zip(axes, ['us', 'cn']):
-        lmm, _, maxt = _load(ds)
+        lmm, _ = _load(ds)
         traits = lmm.trait.tolist()
         y = np.arange(len(traits))
 
@@ -108,15 +104,12 @@ def fig_deltas():
             d = lmm[f'{term}_delta'].values
             se = np.sqrt(lmm[f'{term}_se_rec'] ** 2 + lmm[f'{term}_se_unrec'] ** 2).values
             pu = lmm[f'{term}_delta_p'].values
-            key = 'sem' if term.startswith('sem') else 'vis'
-            pm = (maxt[f'{key}_delta_p_maxt'].values if maxt is not None
-                  else [None] * len(traits))
             yy = y + (0.18 if off == 0 else -0.18)
             ax.errorbar(d, yy, xerr=1.96 * se, fmt='none',
                         ecolor=col, elinewidth=0.85, capsize=2, capthick=0.75, alpha=0.8)
             for k in range(len(traits)):
                 ax.plot(d[k], yy[k], 'o', color=col, markersize=4.5,
-                        **_marker(pu[k], pm[k]))
+                        **_marker(pu[k]))
 
         ax.axvline(0, color='0.3', lw=0.75, ls='--')
         ax.set_yticks(y)
@@ -131,12 +124,9 @@ def fig_deltas():
                Line2D([0], [0], marker='o', color='w', markerfacecolor=VIS_COLOR,
                       markersize=5, label='Visual'),
                Line2D([0], [0], marker='o', color='w', markerfacecolor='0.5',
-                      markeredgecolor='k', markeredgewidth=0.9, markersize=5,
-                      label='survives max-T'),
-               Line2D([0], [0], marker='o', color='w', markerfacecolor='0.5',
                       markeredgecolor='0.35', markeredgewidth=0.6, markersize=5,
                       label='p < .05 uncorrected')]
-    fig.legend(handles=handles, loc='lower center', ncol=4, frameon=False,
+    fig.legend(handles=handles, loc='lower center', ncol=3, frameon=False,
                bbox_to_anchor=(0.5, -0.06))
     fig.tight_layout()
     _save_fig(fig, 'figR1_recognition_lmm_deltas')
@@ -148,7 +138,7 @@ def fig_deltas():
 def fig_betas():
     fig, axes = plt.subplots(1, 2, figsize=(FULL_WIDTH, 3.1))
     for ax, ds in zip(axes, ['us', 'cn']):
-        lmm, _, _ = _load(ds)
+        lmm, _ = _load(ds)
         traits = lmm.trait.tolist()
         y = np.arange(len(traits))
 
@@ -186,7 +176,7 @@ def fig_betas():
 def fig_rsa():
     fig, axes = plt.subplots(1, 2, figsize=(FULL_WIDTH, 3.1))
     for ax, ds in zip(axes, ['us', 'cn']):
-        _, rsa, _ = _load(ds)
+        _, rsa = _load(ds)
         traits = rsa.trait.tolist()
         x = np.arange(len(traits))
         w = 0.2

@@ -226,6 +226,8 @@ __marimo__/
 # 3_pipeline/**/*.csv
 # 4_output/**/*.png
 # 4_output/**/*.csv
+4_output/publication/supplementary/
+4_output/comparison/
 # Keep .gitkeep placeholders
 !**/.gitkeep
 
