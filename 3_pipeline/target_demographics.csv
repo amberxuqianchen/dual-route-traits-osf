@@ -1,0 +1,101 @@
+dataset,celeb_id,name,gender,occupation,race
+us,1,Bre Scullark,Female,Actor/Actress,Black
+us,2,Carey Hart,Male,Athlete,White
+us,3,Zac Efron,Male,Actor/Actress,White
+us,4,Christian Oliver,Male,Actor/Actress,White
+us,5,Conan O'Brien,Male,Host/Media,White
+us,6,Curtis Jackson,Male,Musician,Black
+us,7,Dana Delany,Female,Actor/Actress,White
+us,8,Dean Geyer,Male,Musician,Black
+us,9,Diego Boneta,Male,Actor/Actress,White
+us,10,Dwayne Wade,Male,Athlete,Black
+us,11,Eduardo Noriega,Male,Actor/Actress,White
+us,12,Gabriel Soto,Male,Actor/Actress,White
+us,13,Betty White,Female,Actor/Actress,White
+us,14,George Burns,Male,Actor/Actress,White
+us,15,James Harden,Male,Athlete,Black
+us,16,Hugh Jackman,Male,Actor/Actress,White
+us,17,Isla Fisher,Female,Actor/Actress,White
+us,18,Marilyn Monroe,Female,Actor/Actress,White
+us,19,John Krasinski,Male,Actor/Actress,White
+us,20,John Slattery,Male,Actor/Actress,White
+us,21,Jon Huntsman,Male,Politician/Official,White
+us,22,Katherine Bailess,Female,Actor/Actress,White
+us,23,Keith Lieberthal,Male,Politician/Official,White
+us,24,Kevin Hart,Male,Actor/Actress,Black
+us,25,Kris Allen,Male,Musician,White
+us,26,Logan Marshall-Green,Male,Actor/Actress,White
+us,27,Lonneke Engel,Female,Actor/Actress/Model,White
+us,28,Adam Levine,Male,Musician,White
+us,29,Mario Lopez,Male,Host/Media,White
+us,30,Michelle Obama,Female,Politician/Official,Black
+us,31,Missi Pyle,Female,Actor/Actress,White
+us,32,Naomi Harris,Female,Actor/Actress,Black
+us,33,Natalie Zea,Female,Actor/Actress,White
+us,34,Nathalia Dill,Female,Actor/Actress,White
+us,35,Olivia Palermo,Female,Actor/Actress/Model,White
+us,36,Pat Boone,Male,Musician,White
+us,37,Rachel McAdams,Female,Actor/Actress,White
+us,38,Richard Marx,Male,Musician,White
+us,39,Rodrigo Diaz,Male,Actor/Actress,White
+us,40,Roger Taylor,Male,Musician,White
+us,41,Ron Perlman,Male,Actor/Actress,White
+us,42,Sam Claflin,Male,Actor/Actress,White
+us,43,Samantha Mumba,Female,Musician,Black
+us,44,Shawn Ashmore,Male,Actor/Actress,White
+us,45,Andrea Navedo,Female,Actor/Actress,White
+us,46,Steven Soderbergh,Male,Director,White
+us,47,Tim Gunn,Male,Host/Media,White
+us,48,Treat Williams,Male,Actor/Actress,White
+us,49,Bahar Soomekh,Female,Actor/Actress,White
+us,50,Wentworth Miller,Male,Actor/Actress,Biracial
+cn,1,任正非,Male,Entrepreneur,Chinese
+cn,2,何炅,Male,Host/Media,Chinese
+cn,3,余华,Male,Scholar/Writer,Chinese
+cn,4,全红婵,Female,Athlete,Chinese
+cn,5,刘亦菲,Female,Actor/Actress/Model,Chinese
+cn,6,刘强东,Male,Entrepreneur,Chinese
+cn,7,刘翔,Male,Athlete,Chinese
+cn,8,华春莹,Female,Politician/Official,Chinese
+cn,9,周迅,Female,Actor/Actress/Model,Chinese
+cn,10,奚梦瑶,Female,Actor/Actress/Model,Chinese
+cn,11,姚明,Male,Athlete,Chinese
+cn,12,孙俪,Female,Actor/Actress/Model,Chinese
+cn,13,孙杨,Male,Athlete,Chinese
+cn,14,孙燕姿,Female,Musician,Chinese
+cn,15,孙颖莎,Female,Athlete,Chinese
+cn,16,宋茜,Female,Musician,Chinese
+cn,17,屠呦呦,Female,Scholar/Writer,Chinese
+cn,18,张怡宁,Female,Athlete,Chinese
+cn,19,成龙,Male,Actor/Actress/Model,Chinese
+cn,20,撒贝宁,Male,Host/Media,Chinese
+cn,21,易烊千玺,Male,Actor/Actress/Model,Chinese
+cn,22,杨幂,Female,Actor/Actress/Model,Chinese
+cn,23,杨紫,Female,Actor/Actress/Model,Chinese
+cn,24,杨颖,Female,Actor/Actress/Model,Chinese
+cn,25,林更新,Male,Actor/Actress/Model,Chinese
+cn,26,王一博,Male,Actor/Actress/Model,Chinese
+cn,27,王菲,Female,Musician,Chinese
+cn,28,罗翔,Male,Scholar/Writer,Chinese
+cn,29,苏炳添,Male,Athlete,Chinese
+cn,30,范冰冰,Female,Actor/Actress/Model,Chinese
+cn,31,莫言,Male,Scholar/Writer,Chinese
+cn,32,董卿,Female,Host/Media,Chinese
+cn,33,董明珠,Female,Entrepreneur,Chinese
+cn,34,贾玲,Female,Actor/Actress/Model,Chinese
+cn,35,赵丽颖,Female,Actor/Actress/Model,Chinese
+cn,36,迪丽热巴,Female,Actor/Actress/Model,Chinese
+cn,37,邓超,Male,Actor/Actress/Model,Chinese
+cn,38,那英,Female,Musician,Chinese
+cn,39,郎朗,Male,Musician,Chinese
+cn,40,郭晶晶,Female,Athlete,Chinese
+cn,41,金星,Female,Host/Media,Chinese
+cn,42,钟南山,Male,Scholar/Writer,Chinese
+cn,43,陈奕迅,Male,Musician,Chinese
+cn,44,雷军,Male,Entrepreneur,Chinese
+cn,45,韩红,Female,Musician,Chinese
+cn,46,马云,Male,Entrepreneur,Chinese
+cn,47,马龙,Male,Athlete,Chinese
+cn,48,魏大勋,Male,Actor/Actress/Model,Chinese
+cn,49,鹿晗,Male,Musician,Chinese
+cn,50,黄晓明,Male,Actor/Actress/Model,Chinese

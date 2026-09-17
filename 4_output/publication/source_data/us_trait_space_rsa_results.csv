@@ -1,0 +1,2 @@
+dataset,split,n_celebrities,n_traits,sem_model,vis_model,rsa_sem_r,rsa_sem_p,rsa_sem_p_fwer,rsa_vis_r,rsa_vis_p,rsa_vis_p_fwer,partial_sem_r,partial_sem_p,partial_vis_r,partial_vis_p,unique_sem,unique_vis,shared,total_r2
+us,all,50,8,GPT_wiki_cosine,VGGFace2_cosine,0.3642275441987561,0.0001999600079984,0.0009990009990009,0.3218871925962672,0.0001999600079984,0.0009990009990009,0.3189665490992481,0.0001999600079984,0.273217502335355,0.0001999600079984,0.0872829681477183,0.0867470567444965,0.0387195564718539,0.2127495813640688
